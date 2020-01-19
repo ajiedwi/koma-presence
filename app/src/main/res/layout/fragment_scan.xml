@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ScanFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center_horizontal|bottom"
+        android:background="@color/lightBlue"
+        android:fontFamily="@font/sourcesans_reguler"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:paddingBottom="10dp"
+        android:layout_weight="1"
+        android:text="SCAN" />
+
+    <com.budiyev.android.codescanner.CodeScannerView
+        android:id="@+id/scanner_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        app:autoFocusButtonColor="@android:color/white"
+        app:autoFocusButtonVisible="true"
+        app:flashButtonColor="@android:color/white"
+        app:flashButtonVisible="false"
+        app:frameColor="@android:color/white"
+        app:frameCornersRadius="0dp"
+        app:frameAspectRatioWidth="1"
+        app:frameAspectRatioHeight="1"
+        app:maskColor="@color/white"
+        app:frameSize="0.75"
+        android:visibility="visible"
+        app:frameThickness="0dp"/>
+
+    <LinearLayout
+        android:id="@+id/ll_form_manual"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:gravity="center"
+        android:layout_weight="6"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <FrameLayout
+            android:layout_width="280dp"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:background="@drawable/bg_form_manual"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@null"
+                    android:textSize="14sp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/sourcesans_reguler"
+                    android:textColor="@color/lightBlue"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:background="@color/white"
+                android:textColor="@color/lightBlue"
+                android:text="Nama"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:fontFamily="@font/avenir_reguler"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_height="20dp"/>
+
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:background="@drawable/bg_form_manual"
+                android:layout_height="wrap_content">
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_height="30dp"
+                    android:backgroundTint="@color/lightBlue"
+                    android:entries="@array/event_name"
+                    android:padding="0dp"
+                    android:id="@+id/spinner_form_manual"/>
+            </LinearLayout>
+
+            <TextView
+                android:background="@color/white"
+                android:textColor="@color/lightBlue"
+                android:text="Divisi"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:fontFamily="@font/avenir_reguler"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_height="20dp"/>
+
+
+        </FrameLayout>
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="48dp"
+            android:background="@drawable/btn_light_blue"
+            android:textColor="@drawable/btn_light_blue_text"
+            android:text="Submit"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:layout_marginTop="40dp"
+            android:id="@+id/btn_submit_form"
+            android:fontFamily="@font/avenir_reguler"/>
+
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:clipChildren="false"
+        android:layout_height="0dp">
+
+        <com.ncorti.slidetoact.SlideToActView
+            android:id="@+id/slider_absen"
+            app:rotate_icon="false"
+            app:inner_color="@color/lightBlue"
+            app:outer_color="@color/lighterBlue"
+            app:text_size="14sp"
+            app:text_appearance="@style/TextSlider"
+            app:text_color="@color/white"
+            app:text="Slide to manual"
+            app:slider_icon="@drawable/ic_arrow_forward_black_24dp"
+            app:slider_icon_color="@color/white"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"
+            app:area_margin="-5dp"
+            app:animate_completion="false"
+            android:layout_width="200dp"
+            app:slider_height="40dp"
+            android:layout_height="wrap_content"/>
+
+    </FrameLayout>
+
+</LinearLayout>

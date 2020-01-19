@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/login"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nama"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginEnd="55dp"
+        android:textSize="14sp"
+        android:textColor="@color/textGray"
+        android:fontFamily="@font/sourcesans_reguler"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_marginStart="55dp"
+        android:layout_marginEnd="55dp"
+        android:textSize="14sp"
+        android:text="contoh@gmail.com"
+        android:padding="0dp"
+        android:fontFamily="@font/sourcesans_reguler"
+        android:background="@null"
+        android:textColor="@color/textBlack"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginEnd="55dp"
+        android:background="@color/divider"/>
+
+    <LinearLayout
+        android:layout_marginStart="55dp"
+        android:layout_marginEnd="45dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3">
+
+            <TextView
+                android:id="@+id/tv_login_event"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Event"
+                android:textSize="14sp"
+                android:textColor="@color/textGray"
+                android:fontFamily="@font/sourcesans_reguler"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/lightBlue"
+                android:entries="@array/event_name"
+                android:padding="0dp"
+                android:id="@+id/spinner_event"
+                app:layout_constraintTop_toBottomOf="@id/tv_login_event"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2">
+            <TextView
+                android:id="@+id/tv_login_sesi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sesi"
+                android:textSize="14sp"
+                android:textColor="@color/textGray"
+                android:fontFamily="@font/sourcesans_reguler"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/lightBlue"
+                android:entries="@array/event_sesi"
+                android:padding="0dp"
+                android:id="@+id/spinner_sesi"
+                app:layout_constraintTop_toBottomOf="@id/tv_login_sesi"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+        android:background="@drawable/btn_light_blue"
+        android:textColor="@drawable/btn_light_blue_text"
+        android:text="Login"
+        android:textAllCaps="false"
+        android:textSize="14sp"
+        android:layout_marginTop="40dp"
+        android:id="@+id/btn_login"
+        android:fontFamily="@font/avenir_reguler"/>
+
+</LinearLayout>
